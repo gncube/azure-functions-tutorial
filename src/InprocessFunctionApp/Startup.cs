@@ -33,8 +33,8 @@ public class Startup : FunctionsStartup
             .MinimumLevel.Override("Azure.Core", LogEventLevel.Error)
             .WriteTo.Console(
                 outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} {NewLine}{Exception}",
-                theme: AnsiConsoleTheme.Code,
-                levelSwitch: new LoggingLevelSwitch(LogEventLevel.Debug))
+                theme: AnsiConsoleTheme.Literate,
+                levelSwitch: new LoggingLevelSwitch(LogEventLevel.Information))
             .WriteTo.Debug()
             .WriteTo.File(new JsonFormatter(renderMessage: true),
                 $"logs\\{nameof(InprocessFunctionApp)}-.json",

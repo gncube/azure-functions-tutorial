@@ -24,7 +24,6 @@ public class Startup : FunctionsStartup
         {
             var hostConfig = sp.GetRequiredService<IConfiguration>();
             var logger = new LoggerConfiguration()
-            //.ReadFrom.Configuration(hostConfig)
             .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
             .MinimumLevel.Override("Worker", LogEventLevel.Warning)
             .MinimumLevel.Override("Host", LogEventLevel.Warning)
@@ -44,6 +43,11 @@ public class Startup : FunctionsStartup
             .CreateLogger();
 
             return new SerilogLoggerProvider(logger, dispose: true);
+        });
+
+        builder.Services.AddLogging(loggingBuilder =>
+        {
+            loggingBuilder.AddSerilog();
         });
 
         // Get the execution context

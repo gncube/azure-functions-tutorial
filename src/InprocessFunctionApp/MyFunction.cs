@@ -35,5 +35,7 @@ public class MyFunction
             connectionString = connectionString.Trim();
             _logger.LogError(connectionString);
         }
+
+        _logger.LogInformation($"{_configuration} function completed at: {DateTime.Now}");
     }
 }

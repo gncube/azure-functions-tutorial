@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InprocessFunctionApp", "src\InprocessFunctionApp\InprocessFunctionApp.csproj", "{605EA767-AE54-4475-819C-315B6B434CDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InprocessFunctionApp", "src\InprocessFunctionApp\InprocessFunctionApp.csproj", "{605EA767-AE54-4475-819C-315B6B434CDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsolatedFunctionApp", "src\IsolatedFunctionApp\IsolatedFunctionApp.csproj", "{91EFEA2E-1A14-4041-AE2A-5F149F5F3613}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsolatedSerilogFunctionApp", "src\IsolatedSerilogFunctionApp\IsolatedSerilogFunctionApp.csproj", "{BAF7FA36-0A49-4FE3-B0C2-4A70E1C3D20F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel", "tests\SharedKernel\SharedKernel.csproj", "{FDBF0399-FD67-49A8-82EA-1340A2FAA49F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InprocessFunctionApp.UnitTests", "tests\InprocessFunctionApp.UnitTests\InprocessFunctionApp.UnitTests.csproj", "{5BD7DF0E-F4E5-4BBB-A092-4C78D7E50B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolatedSerilogFunctionApp.UnitTests", "tests\IsolatedSerilogFunctionApp.UnitTests\IsolatedSerilogFunctionApp.UnitTests.csproj", "{0FDF8170-6924-4766-9532-261FE2169EAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{605EA767-AE54-4475-819C-315B6B434CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{605EA767-AE54-4475-819C-315B6B434CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{605EA767-AE54-4475-819C-315B6B434CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EFEA2E-1A14-4041-AE2A-5F149F5F3613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EFEA2E-1A14-4041-AE2A-5F149F5F3613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EFEA2E-1A14-4041-AE2A-5F149F5F3613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EFEA2E-1A14-4041-AE2A-5F149F5F3613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF7FA36-0A49-4FE3-B0C2-4A70E1C3D20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF7FA36-0A49-4FE3-B0C2-4A70E1C3D20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF7FA36-0A49-4FE3-B0C2-4A70E1C3D20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF7FA36-0A49-4FE3-B0C2-4A70E1C3D20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDBF0399-FD67-49A8-82EA-1340A2FAA49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBF0399-FD67-49A8-82EA-1340A2FAA49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBF0399-FD67-49A8-82EA-1340A2FAA49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBF0399-FD67-49A8-82EA-1340A2FAA49F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD7DF0E-F4E5-4BBB-A092-4C78D7E50B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD7DF0E-F4E5-4BBB-A092-4C78D7E50B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD7DF0E-F4E5-4BBB-A092-4C78D7E50B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD7DF0E-F4E5-4BBB-A092-4C78D7E50B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDF8170-6924-4766-9532-261FE2169EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDF8170-6924-4766-9532-261FE2169EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDF8170-6924-4766-9532-261FE2169EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDF8170-6924-4766-9532-261FE2169EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

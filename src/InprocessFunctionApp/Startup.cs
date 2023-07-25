@@ -22,7 +22,7 @@ public class Startup : FunctionsStartup
         // Add logging providers
         builder.Services.AddSingleton<ILoggerProvider>(sp =>
         {
-            var hostConfig = sp.GetRequiredService<IConfiguration>();
+            var hostContext = sp.GetRequiredService<IConfiguration>();
             var logger = new LoggerConfiguration()
             .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
             .MinimumLevel.Override("Worker", LogEventLevel.Warning)
@@ -36,6 +36,8 @@ public class Startup : FunctionsStartup
                 theme: AnsiConsoleTheme.Literate,
                 levelSwitch: new LoggingLevelSwitch(LogEventLevel.Information))
             .WriteTo.Debug()
+                .Enrich.FromLogContext()
+                .WriteTo.Console(theme: AnsiConsoleTheme.Code)
             .WriteTo.File(new JsonFormatter(renderMessage: true),
                 $"logs\\{nameof(InprocessFunctionApp)}-.json",
                 LogEventLevel.Information,
